@@ -1,0 +1,23 @@
+{
+  "name": "iwa2test",
+  "version": "1.0.0",
+  "description": "IWA test app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wfgv/iwa2test.git"
+  },
+  "author": "2018447",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wfgv/iwa2test/issues"
+  },
+  "homepage": "https://github.com/wfgv/iwa2test#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
