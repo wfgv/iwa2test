@@ -10,3 +10,7 @@ ports:
 tasks:
   - init: echo 'init script' # runs during prebuild
     command: echo 'start script'
+  - name: Install MongoDB
+    command: mkdir -p data && mongod --dbpath data
+  - name: Install nodemon
+    command: npm install -g nodemon && npm start

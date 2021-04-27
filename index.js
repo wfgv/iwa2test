@@ -20,18 +20,18 @@ app.use(require('./routes')); // included as a middleware
     //  res.end(); //end the response
     //}).listen(8000); // listen for requests on port 8000
 
-    let users = []; // names of users will be stored here
-    //let emails = [];
-(async function getNames(){
-  try{
-    const {data} = await axios.get("https://swapi.dev/api/people/");
-    users = data.results.map(user=>user.name);
-    //emails = data.map(email=>email.email);
-    console.log(users)
-  } catch(error){
-    console.log(error)
-  }
-})();
+//     let users = []; // names of users will be stored here
+//     //let emails = [];
+// (async function getNames(){
+//   try{
+//     const {data} = await axios.get("https://swapi.dev/api/people/");
+//     users = data.results.map(user=>user.name);
+//     //emails = data.map(email=>email.email);
+//     console.log(users)
+//   } catch(error){
+//     console.log(error)
+//   }
+// })();
 
 app.listen(port, function(err){
     console.log('Listening on port:' + port);
