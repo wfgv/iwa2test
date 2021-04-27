@@ -4,6 +4,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 var app = express();
 var port = 8000;
@@ -13,6 +14,11 @@ app.use(logger('tiny'));
 
 app.use(require('./routes')); // included as a middleware
 
+const dbURI = "mongodb://localhost/test";
+
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology:true})
+        .then((result) => console.log('connected to db'))
+        .catch((err) => console.log(err));
 
    // http.createServer((req, res)=>{
     //  res.write(users.join("\n ")); // write a response
